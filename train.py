@@ -1,8 +1,8 @@
 import tensorflow as tf
-from dataset import *
+from dec.dataset import *
 import os
 import configargparse
-from model import *
+from dec.model import *
 import numpy as np
 
 def train(dataset, \
@@ -107,7 +107,7 @@ def train(dataset, \
 if __name__=="__main__":
     parser = configargparse.ArgParser()
     parser.add("--batch-size", dest="batch_size", help="Train Batch Size", default=300, type=int)
-    parser.add("--gpu-index", dest="gpu_index", help="GPU Index Number", default="1", type=str)
+    parser.add("--gpu-index", dest="gpu_index", help="GPU Index Number", default="0", type=str)
 
     args = vars(parser.parse_args())
     
