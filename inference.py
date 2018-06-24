@@ -10,7 +10,7 @@ def export_z(z, filename, metadata=None, metafilename=None):
         wz = csv.writer(f, delimiter='\t')
         for z_i in z:
             wz.writerow([z_i_j for z_i_j in z_i])
-    print("z export end")     
+
     if metafilename!=None:
         with open(metafilename, 'w', encoding='utf-8', newline='') as f:
             wm = csv.writer(f, delimiter='\t')
@@ -50,8 +50,7 @@ def inference(dataset, \
     
 if __name__=="__main__":
     parser = configargparse.ArgParser()
-    parser.add("--batch-size", dest="batch_size", help="Train Batch Size", default=300, type=int)
-    parser.add("--gpu-index", dest="gpu_index", help="GPU Index Number", default="1", type=str)
+    parser.add("--gpu-index", dest="gpu_index", help="GPU Index Number", default="0", type=str)
 
     args = vars(parser.parse_args())
     
