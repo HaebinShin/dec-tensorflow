@@ -30,6 +30,10 @@ optional arguments:
 ```
 For visualization, we use t-SNE by importing `z.tsv`, `meta.tsv` into [Tensorboard][tensorboard-url].
 The visualization using MNIST shows as follow.
-<img src="cluster.png" width="50%" height="50%" />
+
+<p align="center">
+  <img src="cluster.png" width="50%" height="50%" />
+</p>
+
 [dec-arxiv]: https://arxiv.org/pdf/1511.06335.pdf
 [tensorboard-url]: https://projector.tensorflow.org
